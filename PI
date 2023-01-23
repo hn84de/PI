@@ -1,0 +1,18 @@
+function arclength(x){
+    return Math.sqrt(1/(1-(x*x)));
+}
+function anIterationOfPi(n){
+let g = 1/n;
+for(let i = 1; i<n; i++){
+    g += (1/n)*arclength(i/n);
+}
+console.log(g*2);
+}
+function qw(n){
+    anIterationOfPi(n);
+}
+function qwn(nx){
+    for(i=1;i<nx;i++){
+        qw(i);
+    }
+}
